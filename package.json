@@ -1,5 +1,5 @@
 {
-  "name": "minimal-react-webpack",
+  "name": "machi-koro",
   "version": "1.0.0",
   "description": "A representation of Machi Koro using React/Redux",
   "main": "index.js",
