@@ -1,7 +1,7 @@
 {
   "name": "minimal-react-webpack",
   "version": "1.0.0",
-  "description": "A minimal React Webpack project to get you started",
+  "description": "A representation of Machi Koro using React/Redux",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
@@ -9,16 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/valentinogagliardi/minimal-react-webpack.git"
+    "url": "git+https://github.com/BeastNaylor/machi-koro.git"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/valentinogagliardi/minimal-react-webpack/issues"
+    "url": "https://github.com/BeastNaylor/machi-koro/issues"
   },
-  "homepage":
-    "https://github.com/valentinogagliardi/minimal-react-webpack#readme",
+  "homepage": "https://github.com/BeastNaylor/machi-koro#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
