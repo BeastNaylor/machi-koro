@@ -1,5 +1,5 @@
-# minimal-react-redux-webpack
-> A minimal React/Redux Webpack environment
+# machi-koro
+> A representation of Machi Koro using React/Redux
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](LICENSE)
 
@@ -8,10 +8,6 @@
 ```bash
 npm i && npm start
 ```
-
-## Meta
-
-Valentino Gagliardi - [valentinog.com](https://www.valentinog.com) - valentino@valentinog.com
 
 ## License
 
