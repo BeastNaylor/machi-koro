@@ -5,8 +5,8 @@ class Market extends React.Component {
   render() {
     return (
       <div>
-        <MarketCard name="Test1" type="Test"></MarketCard>
-        <MarketCard name="Test2" type="Prod"></MarketCard>
+        <MarketCard name="Test1" type="Test" cost={2}></MarketCard>
+        <MarketCard name="Test2" type="Prod"cost={4}></MarketCard>
       </div>
     );
   }

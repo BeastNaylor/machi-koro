@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const MarketCard = ({ name, type, cost }) => (
     <div>
@@ -7,5 +8,11 @@ const MarketCard = ({ name, type, cost }) => (
         <span>{cost}</span>
     </div>
 )
+
+MarketCard.propTypes = {
+    name: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    cost: PropTypes.number.isRequired
+  }
 
 export default MarketCard
