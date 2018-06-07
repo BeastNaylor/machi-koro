@@ -1,10 +1,14 @@
-import { SETUP_MARKET, PURCHASE_CARD } from "../constants/action-types"
+import { RESET_MARKET, SETUP_MARKET, PURCHASE_CARD } from "../constants/action-types"
 
-export function setupMarket() {
-  type: "SETUP_MARKET"
-}
+export const resetMarket = () => ({
+  type: RESET_MARKET
+});
+
+export const setupMarket = () => ({
+  type: SETUP_MARKET
+});
 
 export const purchaseCard = card => ({
-  type: PURCHASE_CARD, 
+  type: PURCHASE_CARD,
   payload: card
 });
