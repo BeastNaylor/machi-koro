@@ -22,8 +22,8 @@ const styles = {
 
 const {classes} = jss.createStyleSheet(styles).attach()
 
-const MarketCard = ({ name, type, cost }) => (
-    <li className={classes.marketCard}>
+const MarketCard = ({ id, name, type, cost, onClick }) => (
+    <li className={classes.marketCard} onClick={onClick.bind(this, id)}>
         <div>
             <span>{name}</span>
         </div>

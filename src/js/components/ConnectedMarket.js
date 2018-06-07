@@ -1,11 +1,12 @@
 import { connect } from "react-redux";
-import { resetMarket, setupMarket } from "../actions/index";
+import { resetMarket, setupMarket, purchaseCard } from "../actions/index";
 import Market from "./Market";
 
 const mapDispatchToProps = dispatch => {
     return {
         resetMarket: () => dispatch(resetMarket()),
-        setupMarket: () => dispatch(setupMarket())
+        setupMarket: () => dispatch(setupMarket()),
+        purchaseCard: card => dispatch(purchaseCard(card))
     };
 };
 

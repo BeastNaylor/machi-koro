@@ -16,13 +16,14 @@ const styles = {
 
 const { classes } = jss.createStyleSheet(styles).attach()
 
-const Market = ({ resetMarket, setupMarket, state }) => (
+const Market = ({ resetMarket, setupMarket, purchaseCard, state }) => (
   <div>
     <ul className={classes.marketCardList}>
       {state.marketCards.map(card =>
         <MarketCard
           key={card.id}
           {...card}
+          onClick={purchaseCard}
         />
       )}
     </ul>

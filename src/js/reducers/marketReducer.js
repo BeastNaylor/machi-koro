@@ -7,10 +7,13 @@ const marketReducer = (state = getInitialState(), action) => {
       return getInitialState();
     case SETUP_MARKET:
       //take cards from the deck and add to the market
-      var newState = fillMarket(state);
+      let newState = fillMarket(state);
       return update(state, { marketCards: { $set: newState.marketCards }, marketDeck: { $set: newState.marketDeck } });
     case PURCHASE_CARD:
-      return state;
+      let newMarket = state.marketCards.filter(function (obj) {
+        return obj.id !== action.payload;
+      });
+      return update(state, { marketCards: { $set: newMarket }});;
     default:
       return state;
   }
@@ -33,7 +36,7 @@ function buildMarketDeck() {
 }
 
 function fillMarket(state) {
-  while (state.marketCards.length < 10) {
+  while (state.marketCards.length < 10 && state.marketDeck.length > 0) {
     var newCard = state.marketDeck.pop();
     state.marketCards.push(newCard);
   }
