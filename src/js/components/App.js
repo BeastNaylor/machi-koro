@@ -1,5 +1,5 @@
 import React from "react";
-import Market from "./Market";
+import ConnectedMarket from "./ConnectedMarket";
 
 const App = () => (
   <div>
@@ -10,8 +10,8 @@ const App = () => (
     </div>
     <div className="row">
       <div className="col-sm-12">
-        <Market>
-        </Market>
+        <ConnectedMarket>
+        </ConnectedMarket>
       </div>
     </div>
   </div>
