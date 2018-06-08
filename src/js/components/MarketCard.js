@@ -16,14 +16,24 @@ const styles = {
             display: 'block',
             textAlign: 'center'
         }
+    },
+    grain: {
+        extend: 'marketCard',
+        backgroundColor: 'green'
+    },
+    cog: {
+        extend: 'marketCard',
+        backgroundColor: 'blue'
     }
+
+
 
 }
 
 const {classes} = jss.createStyleSheet(styles).attach()
 
 const MarketCard = ({ id, name, type, cost, onClick }) => (
-    <li className={classes.marketCard} onClick={onClick.bind(this, id)}>
+    <li className={classes[type]} onClick={onClick.bind(this, id)}>
         <div>
             <span>{name}</span>
         </div>
