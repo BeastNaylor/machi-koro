@@ -21,7 +21,12 @@ const MarketCard = ({ classes, card, num, onClick }) => (
 )
 
 MarketCard.propTypes = {
-    num: PropTypes.number.isRequired
+    num: PropTypes.number.isRequired,
+    card: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        type: PropTypes.string.isRequired,
+        cost: PropTypes.number.isRequired
+    }),
 }
 
 export default injectSheet(styles)(MarketCard) 

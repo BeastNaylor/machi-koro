@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types'
 import MarketCard from "./MarketCard";
 import injectSheet from 'react-jss'
 import styles from './Market.css'
@@ -26,5 +27,12 @@ const Market = ({ classes, resetMarket, setupMarket, purchaseCard, state }) => (
           </button>
   </div>
 )
+
+MarketCard.propTypes = {
+  state: PropTypes.shape({
+    marketCards: PropTypes.array.isRequired
+  }),
+
+}
 
 export default injectSheet(styles)(Market);
