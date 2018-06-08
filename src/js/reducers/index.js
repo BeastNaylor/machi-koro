@@ -1,4 +1,4 @@
-import { combineReducers } from "redux";
-import marketReducer from "./marketReducer";
+import { combineReducers } from 'redux'
+import marketReducer from './marketReducer'
 
-export default combineReducers({ market: marketReducer });
+export default combineReducers({ market: marketReducer })
