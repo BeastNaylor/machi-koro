@@ -11,7 +11,6 @@ const styles = {
         width: '18%',
         margin: "0 2% 8px 0",
         padding: 0,
-        backgroundColor: 'red',
         "& span": {
             display: 'block',
             textAlign: 'center'
@@ -24,8 +23,11 @@ const styles = {
     cog: {
         extend: 'marketCard',
         backgroundColor: 'blue'
+    },
+    cafe: {
+        extend: 'marketCard',
+        backgroundColor: 'red'
     }
-
 
 
 }

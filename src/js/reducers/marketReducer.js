@@ -34,6 +34,7 @@ function buildMarketDeck() {
   for (let ii = 0; ii <= 5; ii++) {
     deck.push(marketCardInfo("Forest", 5, "cog"));
     deck.push(marketCardInfo("Field", 1, "grain"))
+    deck.push(marketCardInfo("Cafe", 1, "cafe"))
   }
   shuffle(deck);
   return deck;
