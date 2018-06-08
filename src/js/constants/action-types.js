@@ -1,1 +1,3 @@
-export const ADD_ARTICLE = "ADD_ARTICLE";
+export const RESET_MARKET = "RESET_MARKET";
+export const SETUP_MARKET = "SETUP_MARKET";
+export const PURCHASE_CARD = "PURCHASE_CARD";
