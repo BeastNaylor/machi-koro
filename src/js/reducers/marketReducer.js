@@ -1,19 +1,22 @@
 import { RESET_MARKET, SETUP_MARKET, PURCHASE_CARD } from "../constants/action-types";
 import update from 'react-addons-update';
+import shuffle from '../lib/shuffle';
 
 const marketReducer = (state = getInitialState(), action) => {
+  let newState;
   switch (action.type) {
     case RESET_MARKET:
       return getInitialState();
     case SETUP_MARKET:
       //take cards from the deck and add to the market
-      let newState = fillMarket(state);
+      newState = fillMarket(state);
       return update(state, { marketCards: { $set: newState.marketCards }, marketDeck: { $set: newState.marketDeck } });
     case PURCHASE_CARD:
-      let newMarket = state.marketCards.filter(function (obj) {
+      state.marketCards = state.marketCards.filter(function (obj) {
         return obj.id !== action.payload;
       });
-      return update(state, { marketCards: { $set: newMarket }});;
+      newState = fillMarket(state);
+      return update(state, { marketCards: { $set: newState.marketCards }, marketDeck: { $set: newState.marketDeck } });
     default:
       return state;
   }
@@ -29,9 +32,10 @@ function getInitialState() {
 function buildMarketDeck() {
   let deck = [];
   for (let ii = 0; ii <= 5; ii++) {
-    deck.push(marketCardInfo("Forest", 5, "Cog"));
-    deck.push(marketCardInfo("Field", 1, "Grain"))
+    deck.push(marketCardInfo("Forest", 5, "cog"));
+    deck.push(marketCardInfo("Field", 1, "grain"))
   }
+  shuffle(deck);
   return deck;
 }
 
