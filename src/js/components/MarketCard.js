@@ -11,6 +11,8 @@ const styles = {
         width: '18%',
         margin: "0 2% 8px 0",
         padding: 0,
+        border: '1px solid black',
+        borderRadius: '5px',
         "& span": {
             display: 'block',
             textAlign: 'center'
@@ -18,15 +20,15 @@ const styles = {
     },
     grain: {
         extend: 'marketCard',
-        backgroundColor: 'green'
+        backgroundColor: 'lightgreen'
     },
     cog: {
         extend: 'marketCard',
-        backgroundColor: 'blue'
+        backgroundColor: 'lightblue'
     },
     cafe: {
         extend: 'marketCard',
-        backgroundColor: 'red'
+        backgroundColor: 'lightcoral'
     }
 
 
