@@ -1,22 +1,9 @@
 import React from "react";
 import MarketCard from "./MarketCard";
-import jss from 'jss'
-import preset from 'jss-preset-default'
+import injectSheet from 'react-jss'
+import styles from './Market.css'
 
-jss.setup(preset())
-
-// Create your style.
-const styles = {
-  marketCardList: {
-    listStyle: 'none',
-    display: 'flex',
-    flexWrap: 'wrap'
-  }
-}
-
-const { classes } = jss.createStyleSheet(styles).attach()
-
-const Market = ({ resetMarket, setupMarket, purchaseCard, state }) => (
+const Market = ({ classes, resetMarket, setupMarket, purchaseCard, state }) => (
   <div>
     <ul className={classes.marketCardList}>
       {state.marketCards.map(card =>
@@ -40,4 +27,4 @@ const Market = ({ resetMarket, setupMarket, purchaseCard, state }) => (
   </div>
 )
 
-export default Market;
+export default injectSheet(styles)(Market);
