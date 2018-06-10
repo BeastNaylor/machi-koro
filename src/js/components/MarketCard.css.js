@@ -24,15 +24,23 @@ const styles = {
   cattle: {
     extend: 'producer'
   },
-  cafe: {
+  coffee: {
     extend: 'marketCard',
     backgroundColor: 'lightcoral'
   },
   shop: {
     extend: 'marketCard',
     backgroundColor: 'lightgreen'
+  },
+  bread: {
+    extend: 'shop'
+  },
+  factory: {
+    extend: 'shop'
+  },
+  fruit: {
+    extend: 'shop'
   }
-
 }
 
 export default styles
