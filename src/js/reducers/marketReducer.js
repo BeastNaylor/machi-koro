@@ -36,9 +36,10 @@ function getInitialState () {
   }
 }
 
+const numCardsPerDeck = 10;
 function buildMarketDeck () {
   let deck = []
-  for (let ii = 0; ii <= 5; ii++) {
+  for (let ii = 1; ii <= numCardsPerDeck; ii++) {
     deck.push(marketCardInfo('Wheat Field', 1, 'grain'))
     deck.push(marketCardInfo('Ranch', 1, 'cattle'))
     deck.push(marketCardInfo('Bakery', 1, 'bread'))
@@ -57,8 +58,9 @@ function buildMarketDeck () {
 }
 
 let marketId = 0
+const numCardsPerMarket = 10;
 function fillMarket (state) {
-  while (state.marketCards.length < 5 && state.marketDeck.length > 0) {
+  while (state.marketCards.length < numCardsPerMarket && state.marketDeck.length > 0) {
     var newCard = state.marketDeck.pop()
 
     let existingCardIndex = state.marketCards.findIndex(e => e.card.name === newCard.name)
