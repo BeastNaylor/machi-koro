@@ -51,6 +51,7 @@ function buildMarketDeck () {
     deck.push(marketCardInfo('Family Restaurant', 3, 'coffee'))
     deck.push(marketCardInfo('Apple Orchard', 3, 'grain'))
     deck.push(marketCardInfo('Fruit & Veg Stand', 2, 'fruit'))
+    deck.push(marketCardInfo('Vineyard', 4, 'fruit'))
   }
   shuffle(deck)
   return deck
