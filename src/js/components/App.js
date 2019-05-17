@@ -1,5 +1,5 @@
-import React from "react";
-import ConnectedMarket from "./ConnectedMarket";
+import React from 'react'
+import ConnectedMarket from './ConnectedMarket'
 
 const App = () => (
   <div>
@@ -15,6 +15,6 @@ const App = () => (
       </div>
     </div>
   </div>
-);
+)
 
-export default App;
+export default App
