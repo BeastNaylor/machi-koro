@@ -4,7 +4,7 @@ import MarketCard from './MarketCard'
 import injectSheet from 'react-jss'
 import styles from './Market.css'
 
-const Market = ({ classes, resetMarket, setupMarket, purchaseCard, state }) => (
+const Market = ({ classes, resetMarket, purchaseCard, state }) => (
   <div>
     <ul className={classes.marketCardList}>
       {state.marketCards.map(card =>
@@ -29,7 +29,6 @@ Market.propTypes = {
     marketCards: PropTypes.array.isRequired
   }),
   resetMarket: PropTypes.func,
-  setupMarket: PropTypes.func,
   purchaseCard: PropTypes.func
 }
 
