@@ -18,12 +18,7 @@ const Market = ({ classes, resetMarket, setupMarket, purchaseCard, state }) => (
     <button type="submit"
       className="btn btn-danger btn-lg"
       onClick={resetMarket}>
-      Reset Market
-    </button>
-    <button type="submit"
-      className="btn btn-warning btn-lg"
-      onClick={setupMarket}>
-      Setup Market
+      New Game
     </button>
   </div>
 )

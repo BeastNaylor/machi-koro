@@ -1,4 +1,4 @@
-import { RESET_MARKET, SETUP_MARKET, PURCHASE_CARD } from '../constants/action-types'
+import { RESET_MARKET, PURCHASE_CARD } from '../constants/action-types'
 import update from 'react-addons-update'
 import shuffle from '../lib/shuffle'
 
@@ -6,16 +6,12 @@ const marketReducer = (state = getInitialState(), action) => {
   let newState
   switch (action.type) {
     case RESET_MARKET:
-      return getInitialState()
-    case SETUP_MARKET:
-      // take cards from the deck and add to the market
-      newState = fillMarket(state)
+      newState = fillMarket(getInitialState())
       return update(state, { marketCards: { $set: newState.marketCards }, marketDeck: { $set: newState.marketDeck } })
     case PURCHASE_CARD:
-
       let existingCardIndex = state.marketCards.findIndex(e => e.card.name === action.payload)
       if (existingCardIndex >= 0) {
-        // if we have the card already, increase the count
+        // if we have the card already, decrease the count
         state.marketCards[existingCardIndex].num--
         if (state.marketCards[existingCardIndex].num === 0) {
           state.marketCards.splice(existingCardIndex, 1)

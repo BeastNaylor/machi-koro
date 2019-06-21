@@ -5,7 +5,6 @@ import Market from './Market'
 const mapDispatchToProps = dispatch => {
   return {
     resetMarket: () => dispatch(resetMarket()),
-    setupMarket: () => dispatch(setupMarket()),
     purchaseCard: card => dispatch(purchaseCard(card))
   }
 }
