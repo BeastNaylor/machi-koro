@@ -4,7 +4,7 @@ import MarketCard from './MarketCard'
 import injectSheet from 'react-jss'
 import styles from './Market.css'
 
-const Market = ({ classes, resetMarket, purchaseCard, state }) => (
+const Market = ({ classes, resetMarket, purchaseCard, nextPlayer, state }) => (
   <div>
     <ul className={classes.marketCardList}>
       {state.marketCards.map(card =>
@@ -19,6 +19,11 @@ const Market = ({ classes, resetMarket, purchaseCard, state }) => (
       className="btn btn-danger btn-lg"
       onClick={resetMarket}>
       New Game
+    </button>
+    <button type="submit"
+      className="btn btn-danger btn-lg"
+      onClick={nextPlayer}>
+      Test
     </button>
   </div>
 )

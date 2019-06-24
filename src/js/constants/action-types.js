@@ -1,2 +1,5 @@
 export const RESET_MARKET = 'RESET_MARKET'
 export const PURCHASE_CARD = 'PURCHASE_CARD'
+
+export const NEW_PLAYERS = 'NEW_PLAYERS'
+export const NEXT_PLAYER = 'NEXT_PLAYER'
