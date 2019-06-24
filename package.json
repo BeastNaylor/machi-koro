@@ -53,6 +53,7 @@
     "jss": "^9.8.2",
     "jss-preset-default": "^4.5.0",
     "react-addons-update": "^15.6.2",
-    "react-jss": "^8.5.0"
+    "react-jss": "^8.5.0",
+    "redux-multi": "^0.1.12"
   }
 }
