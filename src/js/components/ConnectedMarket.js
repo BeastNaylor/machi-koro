@@ -11,7 +11,10 @@ const mapDispatchToProps = dispatch => {
 }
 
 const mapStateToProps = state => {
-  return { state: state.market }
+  return { 
+    market: state.market,
+    players: state.players
+  }
 }
 
 const ConnectedMarket = connect(mapStateToProps, mapDispatchToProps)(Market)

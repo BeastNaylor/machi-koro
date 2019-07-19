@@ -6,7 +6,7 @@ const playerReducer = (state = getInitialState(), action) => {
     case NEW_PLAYERS:
       return getInitialState()
     case NEXT_PLAYER:
-      let newActive = (state.activePlayer++) % state.players.length
+      let newActive = (state.activePlayer+1) % state.players.length
       return update(state, {activePlayer : { $set: newActive }})
     default:
       return state

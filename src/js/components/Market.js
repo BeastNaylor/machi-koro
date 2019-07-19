@@ -4,10 +4,10 @@ import MarketCard from './MarketCard'
 import injectSheet from 'react-jss'
 import styles from './Market.css'
 
-const Market = ({ classes, resetMarket, purchaseCard, nextPlayer, state }) => (
+const Market = ({ classes, resetMarket, purchaseCard, nextPlayer, market, players }) => (
   <div>
     <ul className={classes.marketCardList}>
-      {state.marketCards.map(card =>
+      {market.marketCards.map(card =>
         <MarketCard
           key={card.id}
           {...card}
@@ -23,15 +23,18 @@ const Market = ({ classes, resetMarket, purchaseCard, nextPlayer, state }) => (
     <button type="submit"
       className="btn btn-danger btn-lg"
       onClick={nextPlayer}>
-      Test
+      Finish Player {players.activePlayer}
     </button>
   </div>
 )
 
 Market.propTypes = {
   classes: PropTypes.object.isRequired,
-  state: PropTypes.shape({
+  market: PropTypes.shape({
     marketCards: PropTypes.array.isRequired
+  }),
+  market: PropTypes.shape({
+    activePlayer: PropTypes.number
   }),
   resetMarket: PropTypes.func,
   purchaseCard: PropTypes.func
