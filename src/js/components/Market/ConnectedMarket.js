@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { resetMarket, nextPlayer, purchaseCard, newPlayers } from '../actions/index'
+import { resetMarket, nextPlayer, purchaseCard, newPlayers } from '../../actions/index'
 import Market from './Market'
 
 const mapDispatchToProps = dispatch => {
