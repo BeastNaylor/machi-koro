@@ -4,16 +4,13 @@ import Market from './Market'
 
 const mapDispatchToProps = dispatch => {
   return {
-    resetMarket: () => dispatch([resetMarket(), newPlayers()]),
-    nextPlayer: () => dispatch(nextPlayer()),
     purchaseCard: card => dispatch(purchaseCard(card))
   }
 }
 
 const mapStateToProps = state => {
   return { 
-    market: state.market,
-    players: state.players
+    market: state.market
   }
 }
 
